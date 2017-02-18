@@ -1,0 +1,432 @@
+** END HEADER -- Diese Zeile nicht entfernen
+//
+// Erstellt am 15.03.2015
+//
+local f
+f = new delvForm()
+f.mdi = false // Nicht-MDI festlegen
+f.ReadModal()
+
+class delvForm of FORM
+   with (this)
+      height = 18
+      left = 20
+      top = 2
+      width = 86
+      text = "EKB - EinKlickBackup  v3.0" 
+      autoCenter = true
+      mdi = false
+      sizeable = false
+      sysMenu = true
+      escExit = false
+      maximize = false
+      minimize = false
+      MenuFile = "ekb.mnu"
+   endwith
+
+   this.TEXT1 = new TEXT(this)
+   with (this.TEXT1)
+      height = 1.0
+      left = 6.0
+      top = 1
+      width = 10.0
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Quelle 1:"
+   endwith
+
+   this.ENTRYFIELD1 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD1)
+      height = 1.0
+      left = 17.0
+      top = 1
+      width = 65.0
+      maxLength = 260
+      value = Quelle1
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXT2 = new TEXT(this)
+   with (this.TEXT2)
+      height = 1.0
+      left = 6.0
+      top = 2
+      width = 10.0
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Quelle 2:"
+   endwith
+
+   this.ENTRYFIELD2 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD2)
+      height = 1.0
+      left = 17.0
+      top = 2
+      width = 65.0
+      maxLength = 260
+      value = Quelle2
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXT3 = new TEXT(this)
+   with (this.TEXT3)
+      height = 1.0
+      left = 6.0
+      top = 3
+      width = 10.0
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Quelle 3:"
+   endwith
+
+   this.ENTRYFIELD3 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD3)
+      height = 1.0
+      left = 17.0
+      top = 3
+      width = 65.0
+      maxLength = 260
+      value = Quelle3
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXT4 = new TEXT(this)
+   with (this.TEXT4)
+      height = 1.0
+      left = 6.0
+      top = 4
+      width = 10.0
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Quelle 4:"
+   endwith
+
+   this.ENTRYFIELD4 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD4)
+      height = 1.0
+      left = 17.0
+      top = 4
+      width = 65.0
+      maxLength = 260
+      value = Quelle4
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXT5 = new TEXT(this)
+   with (this.TEXT5)
+      height = 1.0
+      left = 6.0
+      top = 5
+      width = 10.0
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Quelle 5:"
+   endwith
+
+   this.ENTRYFIELD5 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD5)
+      height = 1.0
+      left = 17.0
+      top = 5
+      width = 65.0
+      maxLength = 260
+      value = Quelle5
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXT6 = new TEXT(this)
+   with (this.TEXT6)
+      height = 1.0
+      left = 6.0
+      top = 6
+      width = 10.0
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Quelle 6:"
+   endwith
+
+   this.ENTRYFIELD6 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD6)
+      height = 1.0
+      left = 17.0
+      top = 6
+      width = 65.0
+      maxLength = 260
+      value = Quelle6
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXT7 = new TEXT(this)
+   with (this.TEXT7)
+      height = 1.0
+      left = 6.0
+      top = 7
+      width = 10.0
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Quelle 7:"
+   endwith
+
+   this.ENTRYFIELD7 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD7)
+      height = 1.0
+      left = 17.0
+      top = 7
+      width = 65.0
+      maxLength = 260
+      value = Quelle7
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXT8 = new TEXT(this)
+   with (this.TEXT8)
+      height = 1.0
+      left = 6.0
+      top = 9
+      width = 10.0
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Ziel:"
+   endwith
+
+   this.ENTRYFIELD8 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD8)
+      height = 1.0
+      left = 17.0
+      top = 9
+      width = 65.0
+      maxLength = 260
+      value = Ziel
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXT9 = new TEXT(this)
+   with (this.TEXT9)
+      height = 1.0
+      left = 3.5
+      top = 11
+      width = 12.5
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Ausschluss 1:"
+   endwith
+
+   this.ENTRYFIELD9 = new ENTRYFIELD(this)
+   with (this.ENTRYFIELD9)
+      height = 1.0
+      left = 17.0
+      top = 11
+      width = 65.0
+      maxLength = 260
+      value = Ausschl1
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.TEXTA = new TEXT(this)
+   with (this.TEXTA)
+      height = 1.0
+      left = 3.5
+      top = 12
+      width = 12.5
+      alignVertical = 1	// Mitte
+      alignHorizontal = 2	// Rechts
+      text = "Ausschluss 2:"
+   endwith
+
+   this.ENTRYFIELDA = new ENTRYFIELD(this)
+   with (this.ENTRYFIELDA)
+      height = 1.0
+      left = 17.0
+      top = 12
+      width = 65.0
+      maxLength = 260
+      value = Ausschl2
+      validErrorMsg = "Ungültige Eingabe "
+   endwith
+
+   this.PUSHBUTTON1 = new PUSHBUTTON(this)
+   with (this.PUSHBUTTON1)
+      onClick = class::PUSHBUTTON1_ONCLICK
+      height = 3
+      left = 4.0
+      top = 14
+      width = 78.0
+      text = "EKB ausführen !"
+   endwith
+
+   function PUSHBUTTON1_onClick
+		set directory to &ORGVERZ
+      * Eingaben speichern
+   	store form.ENTRYFIELD1.value to quelle1
+   	store form.ENTRYFIELD2.value to quelle2
+   	store form.ENTRYFIELD3.value to quelle3
+   	store form.ENTRYFIELD4.value to quelle4
+   	store form.ENTRYFIELD5.value to quelle5
+   	store form.ENTRYFIELD6.value to quelle6
+   	store form.ENTRYFIELD7.value to quelle7
+   	store form.ENTRYFIELD8.value to ziel
+      store form.ENTRYFIELD9.value to ausschl1
+      store form.ENTRYFIELDA.value to ausschl2
+      * Schaltfläche sperren
+      * this.parent.PUSHBUTTON1.enabled = .F.
+		* Bereinigen der Eingaben
+      store ltrim(rtrim(quelle1)) to quelle1
+      store ltrim(rtrim(quelle2)) to quelle2
+      store ltrim(rtrim(quelle3)) to quelle3
+      store ltrim(rtrim(quelle4)) to quelle4
+      store ltrim(rtrim(quelle5)) to quelle5
+      store ltrim(rtrim(quelle6)) to quelle6
+      store ltrim(rtrim(quelle7)) to quelle7
+      store ltrim(rtrim(ziel)) to ziel
+      store ltrim(rtrim(ausschl1)) to ausschl1
+      store ltrim(rtrim(ausschl2)) to ausschl2
+      * cfg-Datei mit altem Inhalt löschen
+		if file ("ekb.cfg")
+			delete file ekb.cfg
+   	endif
+		* Daten in Dateien schreiben
+		fd1 = new File()
+		fd1.create("ekb.cfg","A")
+	   fd1.puts(quelle1)
+	   fd1.puts(quelle2)
+	   fd1.puts(quelle3)
+	   fd1.puts(quelle4)
+	   fd1.puts(quelle5)
+	   fd1.puts(quelle6)
+	   fd1.puts(quelle7)
+	   fd1.puts(ziel)
+      * Syntax der Eingaben an cygwin anpassen
+      * C: durch /cygdrive/c usw. ersetzen
+		if len(quelle1)>1
+			store "/cygdrive/"+substr(quelle1,1,1)+substr(quelle1,3,len(quelle1)-2) to quelle1
+      endif
+		if len(quelle2)>1
+			store "/cygdrive/"+substr(quelle2,1,1)+substr(quelle2,3,len(quelle2)-2) to quelle2
+      endif
+		if len(quelle3)>1
+			store "/cygdrive/"+substr(quelle3,1,1)+substr(quelle3,3,len(quelle3)-2) to quelle3
+      endif
+		if len(quelle4)>1
+			store "/cygdrive/"+substr(quelle4,1,1)+substr(quelle4,3,len(quelle4)-2) to quelle4
+      endif
+		if len(quelle5)>1
+			store "/cygdrive/"+substr(quelle5,1,1)+substr(quelle5,3,len(quelle5)-2) to quelle5
+      endif
+		if len(quelle6)>1
+			store "/cygdrive/"+substr(quelle6,1,1)+substr(quelle6,3,len(quelle6)-2) to quelle6
+      endif
+		if len(quelle7)>1
+			store "/cygdrive/"+substr(quelle7,1,1)+substr(quelle7,3,len(quelle7)-2) to quelle7
+      endif
+		if len(ziel)>1
+			store "/cygdrive/"+substr(ziel,1,1)+substr(ziel,3,len(ziel)-2) to ziel
+      endif
+	   * "\" durch "/" ersetzen
+		for n=1 to len(quelle1) step 1
+			if substr(quelle1,n,1)="\"
+  				store substr(quelle1,1,n-1)+"/"+substr(quelle1,n+1,len(quelle1)-n) to quelle1
+			endif
+		next
+		for n=1 to len(quelle2) step 1
+			if substr(quelle2,n,1)="\"
+  				store substr(quelle2,1,n-1)+"/"+substr(quelle2,n+1,len(quelle2)-n) to quelle2
+			endif
+		next
+		for n=1 to len(quelle3) step 1
+			if substr(quelle3,n,1)="\"
+  				store substr(quelle3,1,n-1)+"/"+substr(quelle3,n+1,len(quelle3)-n) to quelle3
+			endif
+		next
+		for n=1 to len(quelle4) step 1
+			if substr(quelle4,n,1)="\"
+  				store substr(quelle4,1,n-1)+"/"+substr(quelle4,n+1,len(quelle4)-n) to quelle4
+			endif
+		next
+		for n=1 to len(quelle5) step 1
+			if substr(quelle5,n,1)="\"
+  				store substr(quelle5,1,n-1)+"/"+substr(quelle5,n+1,len(quelle5)-n) to quelle5
+			endif
+		next
+		for n=1 to len(quelle6) step 1
+			if substr(quelle6,n,1)="\"
+  				store substr(quelle6,1,n-1)+"/"+substr(quelle6,n+1,len(quelle6)-n) to quelle6
+			endif
+		next
+		for n=1 to len(quelle7) step 1
+			if substr(quelle7,n,1)="\"
+  				store substr(quelle7,1,n-1)+"/"+substr(quelle7,n+1,len(quelle7)-n) to quelle7
+			endif
+		next
+		for n=1 to len(ziel) step 1
+			if substr(ziel,n,1)="\"
+  				store substr(ziel,1,n-1)+"/"+substr(ziel,n+1,len(ziel)-n) to ziel
+			endif
+		next
+      * exclude-list-Datei mit altem Inhalt löschen
+		if file ("exclude-list.txt")
+			delete file exclude-list.txt
+   	endif
+   	* Batchdatei mit altem Inhalt löschen
+		if file ("backup.cmd")
+			delete file backup.cmd
+   	endif
+		* log-Datei mit altem Inhalt löschen
+		if file ("log.txt")
+			delete file log.txt
+   	endif
+		* Daten in Dateien schreiben
+		fd2 = new File()
+		fd2.create("exclude-list.txt","A")
+	   fd2.puts(ausschl1)
+	   fd2.puts(ausschl2)
+		* Dateien schließen
+		fd1.close()
+      fd2.close()
+		* Backup.cmd erstellen
+		fd1 = new File()
+		fd1.create("backup.cmd","A")
+      store "@echo off" to m
+      fd1.puts(m)
+      store "color F1" to m
+	   fd1.puts(m)
+      store "set cygwin=nontsec" to m
+      fd1.puts(m)
+		if quelle1<>""
+	      store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle1)+"' '"+oem(ziel)+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"/_x_'" to m
+	      fd1.puts(m)
+		endif
+		if quelle2<>""
+	      store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle2)+"' '"+oem(ziel)+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"/_x_'" to m
+	      fd1.puts(m)
+		endif
+		if quelle3<>""
+	      store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle3)+"' '"+oem(ziel)+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"/_x_'" to m
+	      fd1.puts(m)
+		endif
+		if quelle4<>""
+	      store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle4)+"' '"+oem(ziel)+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"/_x_'" to m
+	      fd1.puts(m)
+		endif
+		if quelle5<>""
+	      store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle5)+"' '"+oem(ziel)+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"/_x_'" to m
+	      fd1.puts(m)
+		endif
+		if quelle6<>""
+	      store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle6)+"' '"+oem(ziel)+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"/_x_'" to m
+	      fd1.puts(m)
+		endif
+		if quelle7<>""
+	      store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle7)+"' '"+oem(ziel)+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"/_x_'" to m
+	      fd1.puts(m)
+		endif
+		store "write .\log.txt" to m
+      fd1.puts(m)
+      store "rem Ende" to m
+      fd1.puts(m)
+		fd1.close()
+      * Backup ausführen
+      store "backup.cmd" to m
+		run (.f.,m)
+      return
+endclass
+

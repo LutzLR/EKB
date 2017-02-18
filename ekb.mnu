@@ -1,0 +1,56 @@
+* ekb.mnu
+** END HEADER -- Diese Zeile nicht entfernen
+//
+parameter formObj
+new ekbMENU(formObj, "ekbmnu")
+
+class ekbMENU(formObj, name) of MENUBAR(formObj, name)
+
+
+   this.MENU1 = new MENU(this)
+   with (this.MENU1)
+      text = "Programm"
+   endwith
+
+   this.MENU1.MENU2 = new MENU(this.MENU1)
+   with (this.MENU1.MENU2)
+      text = "Letzte Logdatei betrachten"
+      OnClick = CLASS::PROTOKOLL_ONCLICK
+   endwith
+
+   this.MENU1.MENU3 = new MENU(this.MENU1)
+   with (this.MENU1.MENU3)
+      text = "Beenden"
+      OnClick = CLASS::BEENDEN_ONCLICK
+   endwith
+
+
+   this.MENU5 = new MENU(this)
+   with (this.MENU5)
+      text = "Hilfe"
+   endwith
+
+   this.MENU5.MENU6 = new MENU(this.MENU5)
+   with (this.MENU5.MENU6)
+      text = "Hilfe zu EKB"
+      OnClick = CLASS::HILFE_ONCLICK
+   endwith
+
+   Procedure HILFE_OnClick  && Hilfe
+      set directory to &ORGVERZ
+      store "RunDll32.EXE URL.DLL,FileProtocolHandler "+orgverz+"\ekb.pdf" to m
+      run (.t.,m)
+   return   
+
+   Procedure PROTOKOLL_OnClick  && Logdatei betrachten
+      set directory to &ORGVERZ
+		store "write .\log.txt" to m
+      run (.t.,m)
+   return
+
+   Procedure BEENDEN_OnClick  && Ende
+      set directory to &ORGVERZ
+      form.close()
+   return   
+
+endclass

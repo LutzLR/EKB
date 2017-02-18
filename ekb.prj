@@ -1,0 +1,121 @@
+Project File generated 02.01.2017 16:57:37
+
+[Project]
+Name=EKB
+DefaultDir=.
+MainProjectFileName=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\ekb.prg
+Parameters=
+Author=Lutz.L.Richter
+Description=
+Preprocessor=
+LogFileName=ekb.txt
+PrefPathFormat=R
+TargetFileName=EKB.exe
+IconFileName=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\ekb.ico
+SplashFileName=
+MostRecentSelectedFileName=
+WebApplication=false
+DeoOption=False
+enableUAC=0
+inioption=1
+
+[Contents]
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\ekb.prg,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\ekb.wfm,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\ekb.ico,0,1,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\EKB.pdf,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\Versionen.txt,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\PLUSrun.exe,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\PLUSr_de.dll,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\cygiconv-2.dll,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\cygwin1.dll,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\rsync.exe,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\ekb.mnu,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v3.0\rsync.bin,0,0,0, 
+
+[DEO]
+
+[INNO]
+ProjectExeFileName=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\EKB.exe
+ProjectMainFileName=\Project\Explorer.iss
+ProjectdBaseVersion=dBASE PLUS 2.80  b2215 (04/25/2012-DE120425)
+DefaultDirName={pf}\{#AppName}
+AppName=EKB
+AppVersion=2.0.0.0
+SM_dBASERuntime=false
+dBPlus=true
+dBSeparat=false
+Resource=false
+dBASELang=DE
+dBaseRuntimeDir=C:\Programme\dBASE\Plus\Runtime\PlusRuntime-b2215.exe
+XPLook=false
+dBaseBuild=2215
+dBaseVersion=2800
+SetupLang=de
+SepDestDir=false
+BDEGroupEntries=false
+dBProgressbar=false
+dBProgressbox=false
+dBSilent=false
+dBDestRuntime=
+dBDestBDE=
+SourceFolder=D:\Lutz\Documents\Sw_Proj\EKB\v3.0
+InnoScriptname=\Project\Explorer.iss
+LastDBVersion=2800
+LastDBLanguage=DE
+LastCreateDate=
+IncDispGroup=true
+IncUninsEntry=true
+IncDesktopEntry=false
+IncQuickEntry=false
+ENLicense=
+ENBefore=
+ENAfter=
+DELicense=
+DEBefore=
+DEAfter=
+ESLicense=
+ESBefore=
+ESAfter=
+ITLicense=
+ITBefore=
+ITAfter=
+JALicense=
+JABefore=
+JAAfter=
+FRLicense=
+FRBefore=
+FRAfter=
+DKLicense=
+DKBefore=
+DKAfter=
+PLLicense=
+PLBefore=
+PLAfter=
+NLLicense=
+NLBefore=
+NLAfter=
+UninsHS=true
+UninsHSAppName=
+UninsHSAppId=
+UninsHSLanguages=All
+BDEUseSettings=false
+BDEMaxFileHandle=255
+BDELangDriver='ascii' ANSI
+BDELevel=7
+BDEMemoBlockSize=1024
+BDEMDXBlockSize=1024
+INNOINI=false
+INIERRORHANDLING=false
+INITRAP=true
+ININOBDE=false
+Icon1={group}\{#AppName} >> {app}\EKB.exe
+Files1=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\EKB.pdf >> DestDir: {app}
+Files2=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\Versionen.txt >> DestDir: {app}
+Files3=D:\Lutz\Documents\sw_proj\EKB\v3.0\EKB.exe >> DestDir: {app}
+Files4=D:\Lutz\Documents\sw_proj\EKB\v3.0\PLUSrun.exe >> DestDir: {app}
+Files5=D:\Lutz\Documents\sw_proj\EKB\v3.0\PLUSr_de.dll >> DestDir: {app}
+Files6=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\cygiconv-2.dll >> DestDir: {app}
+Files7=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\cygwin1.dll >> DestDir: {app}
+Files8=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\rsync.exe >> DestDir: {app}
+Files9=D:\Lutz\Documents\Sw_Proj\EKB\v3.0\rsync.bin >> DestDir: {app}

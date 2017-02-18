@@ -1,0 +1,26 @@
+EKB - ein kleines Programm zum Thema Backup
+
+
+Version 3.0, 04.01.2017
+-----------------------
+
+- Die Eingaben für Quelle und Ziel wurden an die unter
+  Windows übliche Schreibweise angepasst. Beispiel:
+  Statt /cygdrive/c/nonbku ist jetzt c:\nonbku einzugeben.
+- Der Virenscanner v. Kaspersky reagiert mitunter allergisch
+  auf das Verhalten von rsync.exe.
+  Falls rsync.exe durch diese Fehlalarme gelöscht wurde, wird
+  diese Datei nun beim Programmstart von EKB wieder hergestellt.
+
+
+Version 2.0, 26.12.2015
+-----------------------
+
+- Eingabemöglichkeit für 2 Ausschlüsse hinzugefügt.
+- Menü im Programm hinzugefügt.
+
+
+Version 1.0, 23.03.2015
+-----------------------
+
+- Erste lauffähige Version mit allen Ressourcen
