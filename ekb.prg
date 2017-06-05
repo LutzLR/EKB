@@ -32,10 +32,13 @@ set space off
 * fd2 ... Dateiobjekt für exclude-list.txt
 * m ... für div. Zeichenketten
 * n ... allg. Zähler
+* s ... für Shutdown
+* v ... Version
 * ORGVERZ ... für Installationsverzeichnis
-PUBLIC ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,n
-STORE "" TO ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m
+PUBLIC ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,n,s
+STORE "" TO ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,s
 STORE 0 to n
+store "v3.1" to v  && Versionsnummer
 public fd1,fd2  && Dateiobjekte initialisieren
 * Verzeichnis von EKB feststellen und speichern
 store program(1) to m
@@ -65,6 +68,7 @@ if file ("ekb.pdf");
 		quelle6 = fd1.gets()
 		quelle7 = fd1.gets()
 		ziel = fd1.gets()
+      s = fd1.gets()
 		fd1.close()
 	endif
    if file ("exclude-list.txt")

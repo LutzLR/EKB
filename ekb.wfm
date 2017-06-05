@@ -3,17 +3,17 @@
 // Erstellt am 15.03.2015
 //
 local f
-f = new delvForm()
+f = new ekbForm()
 f.mdi = false // Nicht-MDI festlegen
 f.ReadModal()
 
-class delvForm of FORM
+class ekbForm of FORM
    with (this)
-      height = 18
+      height = 20
       left = 20
-      top = 2
+      top = 1
       width = 86
-      text = "EKB - EinKlickBackup  v3.0" 
+      text = "EKB - EinKlickBackup "+v
       autoCenter = true
       mdi = false
       sizeable = false
@@ -34,7 +34,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Quelle 1:"
    endwith
-
    this.ENTRYFIELD1 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD1)
       height = 1.0
@@ -56,7 +55,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Quelle 2:"
    endwith
-
    this.ENTRYFIELD2 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD2)
       height = 1.0
@@ -78,7 +76,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Quelle 3:"
    endwith
-
    this.ENTRYFIELD3 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD3)
       height = 1.0
@@ -100,7 +97,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Quelle 4:"
    endwith
-
    this.ENTRYFIELD4 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD4)
       height = 1.0
@@ -122,7 +118,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Quelle 5:"
    endwith
-
    this.ENTRYFIELD5 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD5)
       height = 1.0
@@ -144,7 +139,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Quelle 6:"
    endwith
-
    this.ENTRYFIELD6 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD6)
       height = 1.0
@@ -166,7 +160,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Quelle 7:"
    endwith
-
    this.ENTRYFIELD7 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD7)
       height = 1.0
@@ -188,7 +181,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Ziel:"
    endwith
-
    this.ENTRYFIELD8 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD8)
       height = 1.0
@@ -210,7 +202,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Ausschluss 1:"
    endwith
-
    this.ENTRYFIELD9 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD9)
       height = 1.0
@@ -232,7 +223,6 @@ class delvForm of FORM
       alignHorizontal = 2	// Rechts
       text = "Ausschluss 2:"
    endwith
-
    this.ENTRYFIELDA = new ENTRYFIELD(this)
    with (this.ENTRYFIELDA)
       height = 1.0
@@ -244,12 +234,47 @@ class delvForm of FORM
       validErrorMsg = "Ungültige Eingabe "
    endwith
 
+   DEFINE TEXT TEXTB OF THIS;
+       PROPERTY; 
+         Width 42,;
+         Text "PC nach Abschluss des Backups herunterfahren ?",;
+         Top 14,;
+         Left 4,;
+         Alignment 3,;
+         Height 1,;
+         ColorNormal "N/BtnFace"
+   DEFINE LINE LINIE1 OF THIS;
+       PROPERTY; 
+         Width 1,;
+         Right 79,;
+         Bottom 14.75,;
+         Left 47,;
+         Top 14.75,;
+         ColorNormal "N"
+   if s="0"
+   	DEFINE CHECKBOX CHECKBOX1 OF THIS;
+      	 PROPERTY; 
+         	Width 2,;
+         	Value .F.,;
+         	Left 80,;
+         	Top 14,;
+         	Height 1
+   else
+   	DEFINE CHECKBOX CHECKBOX1 OF THIS;
+      	 PROPERTY; 
+         	Width 2,;
+         	Value .T.,;
+         	Left 80,;
+         	Top 14,;
+         	Height 1
+   endif
+
    this.PUSHBUTTON1 = new PUSHBUTTON(this)
    with (this.PUSHBUTTON1)
       onClick = class::PUSHBUTTON1_ONCLICK
       height = 3
       left = 4.0
-      top = 14
+      top = 16
       width = 78.0
       text = "EKB ausführen !"
    endwith
@@ -267,6 +292,11 @@ class delvForm of FORM
    	store form.ENTRYFIELD8.value to ziel
       store form.ENTRYFIELD9.value to ausschl1
       store form.ENTRYFIELDA.value to ausschl2
+      if form.CHECKBOX1.value = .T.
+      	store "1" to s
+      else
+      	store "0" to s
+      endif
       * Schaltfläche sperren
       * this.parent.PUSHBUTTON1.enabled = .F.
 		* Bereinigen der Eingaben
@@ -295,6 +325,7 @@ class delvForm of FORM
 	   fd1.puts(quelle6)
 	   fd1.puts(quelle7)
 	   fd1.puts(ziel)
+      fd1.puts(s)
       * Syntax der Eingaben an cygwin anpassen
       * C: durch /cygdrive/c usw. ersetzen
 		if len(quelle1)>1
@@ -419,7 +450,11 @@ class delvForm of FORM
 	      store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle7)+"' '"+oem(ziel)+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"/_x_'" to m
 	      fd1.puts(m)
 		endif
-		store "write .\log.txt" to m
+      if s="0"
+			store "write .\log.txt" to m  && Logdatei anzeigen
+      else
+      	store "shutdown /s /t 010" to m  && Shutdown
+      endif
       fd1.puts(m)
       store "rem Ende" to m
       fd1.puts(m)
