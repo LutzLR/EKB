@@ -1,4 +1,17 @@
 EKB - ein kleines Programm zum Thema Backup
+----------------------------------------------------------------
+
+
+Version 3.2, 19.06.2017
+-----------------------
+
+- Mittel rechtem Mausklick kann jetzt der Inhalt der Windows-
+  Zwischenablage in die Eingabefelder des Programms eingefügt
+  werden.
+- Fehlerkorrektur: EKB kann jetzt in Verzeichnissen installiert
+  werden, welche Leerzeichen im Namen / Pfad enthalten.
+- Im Menü Eintrag "EKB bei GitHub" hinzugefügt.
+- Beschreibung zu EKB (ekb.pdf) korrigiert.
 
 
 Version 3.1, 09.06.2017
@@ -13,7 +26,7 @@ Version 3.0, 04.01.2017
 
 - Die Eingaben für Quelle und Ziel wurden an die unter
   Windows übliche Schreibweise angepasst. Beispiel:
-  Statt /cygdrive/c/nonbku ist jetzt c:\nonbku einzugeben.
+  Statt /cygdrive/c/test ist jetzt c:\test einzugeben.
 - Der Virenscanner v. Kaspersky reagiert mitunter allergisch
   auf das Verhalten von rsync.exe.
   Falls rsync.exe durch diese Fehlalarme gelöscht wurde, wird

@@ -36,6 +36,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD1 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD1)
+   	onRightMouseUp = class::ENTRYFIELD1_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 1
@@ -57,6 +58,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD2 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD2)
+     	onRightMouseUp = class::ENTRYFIELD2_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 2
@@ -78,6 +80,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD3 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD3)
+     	onRightMouseUp = class::ENTRYFIELD3_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 3
@@ -99,6 +102,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD4 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD4)
+     	onRightMouseUp = class::ENTRYFIELD4_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 4
@@ -120,6 +124,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD5 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD5)
+     	onRightMouseUp = class::ENTRYFIELD5_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 5
@@ -141,6 +146,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD6 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD6)
+     	onRightMouseUp = class::ENTRYFIELD6_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 6
@@ -162,6 +168,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD7 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD7)
+     	onRightMouseUp = class::ENTRYFIELD7_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 7
@@ -183,6 +190,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD8 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD8)
+     	onRightMouseUp = class::ENTRYFIELD8_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 9
@@ -204,6 +212,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELD9 = new ENTRYFIELD(this)
    with (this.ENTRYFIELD9)
+     	onRightMouseUp = class::ENTRYFIELD9_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 11
@@ -225,6 +234,7 @@ class ekbForm of FORM
    endwith
    this.ENTRYFIELDA = new ENTRYFIELD(this)
    with (this.ENTRYFIELDA)
+     	onRightMouseUp = class::ENTRYFIELDA_onRightMouseUp
       height = 1.0
       left = 17.0
       top = 12
@@ -276,8 +286,48 @@ class ekbForm of FORM
       left = 4.0
       top = 16
       width = 78.0
-      text = "EKB ausführen !"
+      text = "EinKlickBackup ausführen !"
    endwith
+
+   function ENTRYFIELD1_onRightMouseUp
+      form.ENTRYFIELD1.paste()
+   return
+
+   function ENTRYFIELD2_onRightMouseUp
+      form.ENTRYFIELD2.paste()
+   return
+
+   function ENTRYFIELD3_onRightMouseUp
+      form.ENTRYFIELD3.paste()
+   return
+
+   function ENTRYFIELD4_onRightMouseUp
+      form.ENTRYFIELD4.paste()
+   return
+
+   function ENTRYFIELD5_onRightMouseUp
+      form.ENTRYFIELD5.paste()
+   return
+
+   function ENTRYFIELD6_onRightMouseUp
+      form.ENTRYFIELD6.paste()
+   return
+
+   function ENTRYFIELD7_onRightMouseUp
+      form.ENTRYFIELD7.paste()
+   return
+
+   function ENTRYFIELD8_onRightMouseUp
+      form.ENTRYFIELD8.paste()
+   return
+
+   function ENTRYFIELD9_onRightMouseUp
+      form.ENTRYFIELD9.paste()
+   return
+
+   function ENTRYFIELDA_onRightMouseUp
+      form.ENTRYFIELDA.paste()
+   return
 
    function PUSHBUTTON1_onClick
 		set directory to &ORGVERZ
@@ -462,6 +512,6 @@ class ekbForm of FORM
       * Backup ausführen
       store "backup.cmd" to m
 		run (.f.,m)
-      return
+   return
 endclass
 

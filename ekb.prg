@@ -17,7 +17,6 @@ SET SAFETY OFF
 SET TALK OFF
 set space off
 * sonstige Variablen:
-* ORGVERZ
 * Quelle1
 * Quelle2
 * Quelle3
@@ -38,11 +37,11 @@ set space off
 PUBLIC ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,n,s
 STORE "" TO ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,s
 STORE 0 to n
-store "v3.1" to v  && Versionsnummer
+store "v3.2" to v  && Versionsnummer
 public fd1,fd2  && Dateiobjekte initialisieren
 * Verzeichnis von EKB feststellen und speichern
 store program(1) to m
-store substr(m,1,len(m)-8) to orgverz
+store '"'+substr(m,1,len(m)-8)+'"' to orgverz
 * Prüfen der Installation
 set directory to &ORGVERZ
 if file ("rsync.exe")

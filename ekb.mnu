@@ -36,11 +36,23 @@ class ekbMENU(formObj, name) of MENUBAR(formObj, name)
       OnClick = CLASS::HILFE_ONCLICK
    endwith
 
+   this.MENU5.MENU7 = new MENU(this.MENU5)
+   with (this.MENU5.MENU7)
+      text = "EKB bei GitHub"
+      OnClick = CLASS::GITHUB_ONCLICK
+   endwith
+
    Procedure HILFE_OnClick  && Hilfe
       set directory to &ORGVERZ
-      store "RunDll32.EXE URL.DLL,FileProtocolHandler "+orgverz+"\ekb.pdf" to m
+      store "RunDll32.EXE URL.DLL,FileProtocolHandler "+".\ekb.pdf" to m
       run (.t.,m)
    return   
+
+   Procedure GITHUB_OnClick  && EKB bei GitHub
+      set directory to &ORGVERZ
+     	store "start https://github.com/LutzLR/EKB" to m
+      run (.f.,m)
+   return
 
    Procedure PROTOKOLL_OnClick  && Logdatei betrachten
       set directory to &ORGVERZ
