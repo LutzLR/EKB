@@ -5,7 +5,7 @@ EKB - ein kleines Programm zum Thema Backup
 Version 3.2, 19.06.2017
 -----------------------
 
-- Mittel rechtem Mausklick kann jetzt der Inhalt der Windows-
+- Mittels rechtem Mausklick kann jetzt der Inhalt der Windows-
   Zwischenablage in die Eingabefelder des Programms eingefügt
   werden.
 - Fehlerkorrektur: EKB kann jetzt in Verzeichnissen installiert
