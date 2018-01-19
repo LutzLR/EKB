@@ -349,7 +349,7 @@ class ekbForm of FORM
       endif
       * Schaltfläche sperren
       * this.parent.PUSHBUTTON1.enabled = .F.
-		* Bereinigen der Eingaben
+		* Bereinigen der Eingaben, trimmen
       store ltrim(rtrim(quelle1)) to quelle1
       store ltrim(rtrim(quelle2)) to quelle2
       store ltrim(rtrim(quelle3)) to quelle3
@@ -360,6 +360,31 @@ class ekbForm of FORM
       store ltrim(rtrim(ziel)) to ziel
       store ltrim(rtrim(ausschl1)) to ausschl1
       store ltrim(rtrim(ausschl2)) to ausschl2
+		* Bereinigen der Eingaben, abschließende \ entfernen
+      if substr(quelle1,len(quelle1),1)="\"
+			store substr(quelle1,1,len(quelle1)-1) to quelle1
+      endif
+      if substr(quelle2,len(quelle2),1)="\"
+			store substr(quelle2,1,len(quelle2)-1) to quelle2
+      endif
+      if substr(quelle3,len(quelle3),1)="\"
+			store substr(quelle3,1,len(quelle3)-1) to quelle3
+      endif
+      if substr(quelle4,len(quelle4),1)="\"
+			store substr(quelle4,1,len(quelle4)-1) to quelle4
+      endif
+      if substr(quelle5,len(quelle5),1)="\"
+			store substr(quelle5,1,len(quelle5)-1) to quelle5
+      endif
+      if substr(quelle6,len(quelle6),1)="\"
+			store substr(quelle6,1,len(quelle6)-1) to quelle6
+      endif
+      if substr(quelle7,len(quelle7),1)="\"
+			store substr(quelle7,1,len(quelle7)-1) to quelle7
+      endif
+      if substr(ziel,len(ziel),1)="\"
+			store substr(ziel,1,len(ziel)-1) to ziel
+      endif
       * cfg-Datei mit altem Inhalt löschen
 		if file ("ekb.cfg")
 			delete file ekb.cfg
