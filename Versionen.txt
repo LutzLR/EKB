@@ -1,6 +1,12 @@
 EKB - ein kleines Programm zum Thema Backup
 ----------------------------------------------------------------
 
+Version 3.4, 14.04.2018
+-----------------------
+
+- Beschreibung zu EKB (ekb.pdf) verbessert.
+
+
 Version 3.3, 17.01.2018
 -----------------------
 

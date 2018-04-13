@@ -37,7 +37,7 @@ set space off
 PUBLIC ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,n,s
 STORE "" TO ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,s
 STORE 0 to n
-store "v3.3" to v  && Versionsnummer
+store "v3.4" to v  && Versionsnummer
 public fd1,fd2  && Dateiobjekte initialisieren
 * Verzeichnis von EKB feststellen und speichern
 store program(1) to m
