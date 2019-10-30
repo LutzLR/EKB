@@ -1,5 +1,33 @@
 EKB - ein kleines Programm zum Thema Backup
-----------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Version 4.0, 27.10.2019
+-----------------------
+
+- Das Schema zur Bildung der Zielverzeichnisse wurde komplett geändert.
+
+  Bisher:
+  Quelle 1: C:\Users\LutzLR\Dokumente -> Ziel: <Lw>\<Pfad>\Dokumente
+  Nicht auszuschließen war dabei, dass verschiedene Quellverzeichnisse auf das
+  gleiche Zielverzeichnisse schreiben (was kein sinnvolles Ergebnis liefert):
+  Quelle 1: C:\Users\LutzLR\Dokumente -> Ziel: <Lw>\<Pfad>\Dokumente
+  Quelle 2: D:\LutzLR\Dokumente       -> Ziel: <Lw>\<Pfad>\Dokumente
+
+  Neu:
+  Quelle 1: C:\Users\LutzLR\Dokumente -> Ziel: <Lw>\<Pfad>\1
+  Quelle 2: D:\LutzLR\Dokumente       -> Ziel: <Lw>\<Pfad>\2 usw.
+  Vorteil ist hierbei, dass die Pfade der Zielverzeichnisse kürzer werden,
+  was die Fehler wie "file name too long" seltener macht ...
+
+  Die Pfade bestehender Backups müssen vor der Verwendung mit der Version 4.0
+  entsprechend umbenannt werden.
+  
+- Die Eingaben von Quelle und Ziel sind jetzt wieder mit einem abschließenden
+  Backslash anzugeben.
+  Diese Eingaben werden geprüft, ggf. werden abschließende \ ergänzt.
+
+- Beschreibung zu EKB (ekb.pdf) verbessert, angepasst, korrigiert.
+
 
 Version 3.4, 14.04.2018
 -----------------------
@@ -10,39 +38,39 @@ Version 3.4, 14.04.2018
 Version 3.3, 17.01.2018
 -----------------------
 
-- Korrekturfunktion hinzugefügt: Ein ggf. eingegebener
-  abschließender Backslash für Quelle und Ziel wird automatisch
-  entfernt.
+- Korrekturfunktion hinzugefügt: Ein ggf. eingegebener abschließender Backslash
+  für Quelle und Ziel wird automatisch entfernt.
 
 
 Version 3.2, 19.06.2017
 -----------------------
 
-- Mittel rechtem Mausklick kann jetzt der Inhalt der Windows-
-  Zwischenablage in die Eingabefelder des Programms eingefügt
-  werden.
-- Fehlerkorrektur: EKB kann jetzt in Verzeichnissen installiert
-  werden, welche Leerzeichen im Namen / Pfad enthalten.
-- Im Menü Eintrag "EKB bei GitHub" hinzugefügt.
-- Beschreibung zu EKB (ekb.pdf) korrigiert.
+- Mittel rechtem Mausklick kann jetzt der Inhalt der Windows-Zwischenablage
+  in die Eingabefelder des Programms eingefügt werden.
+
+- Fehlerkorrektur: EKB kann jetzt in Verzeichnissen installiert werden, welche
+  Leerzeichen im Namen / Pfad enthalten.
+
+- Im Menü wurde der Eintrag "EKB bei GitHub" hinzugefügt.
+
+- Die Beschreibung zu EKB (ekb.pdf) wurde korrigiert.
 
 
 Version 3.1, 09.06.2017
 -----------------------
 
-- Funktion zum Herunterfahren des PC nach Abschluss des Backups
-  hinzugefügt.
+- Funktion zum Herunterfahren des PC nach Abschluss des Backups hinzugefügt.
 
 
 Version 3.0, 04.01.2017
 -----------------------
 
-- Die Eingaben für Quelle und Ziel wurden an die unter
-  Windows übliche Schreibweise angepasst. Beispiel:
+- Die Eingaben für Quelle und Ziel wurden an die unter Windows übliche
+  Schreibweise angepasst. Beispiel:
   Statt /cygdrive/c/test ist jetzt c:\test einzugeben.
-- Der Virenscanner v. Kaspersky reagiert mitunter allergisch
-  auf das Verhalten von rsync.exe.
-  Falls rsync.exe durch diese Fehlalarme gelöscht wurde, wird
+
+- Der Virenscanner v. Kaspersky reagiert mitunter allergisch auf das Verhalten
+  von rsync.exe. Falls rsync.exe durch diese Fehlalarme gelöscht wurde, wird
   diese Datei nun beim Programmstart von EKB wieder hergestellt.
 
 
@@ -50,6 +78,7 @@ Version 2.0, 26.12.2015
 -----------------------
 
 - Eingabemöglichkeit für 2 Ausschlüsse hinzugefügt.
+
 - Menü im Programm hinzugefügt.
 
 
