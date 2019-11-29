@@ -1,9 +1,9 @@
-Project File generated 18.06.2017 10:37:47
+Project File generated 29.11.2019 18:32:48
 
 [Project]
 Name=EKB
 DefaultDir=.
-MainProjectFileName=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\ekb.prg
+MainProjectFileName=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\ekb.prg
 Parameters=
 Author=Lutz.L.Richter
 Description=
@@ -11,7 +11,7 @@ Preprocessor=
 LogFileName=ekb.txt
 PrefPathFormat=R
 TargetFileName=EKB.exe
-IconFileName=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\ekb.ico
+IconFileName=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\ekb.ico
 SplashFileName=
 MostRecentSelectedFileName=
 WebApplication=false
@@ -20,24 +20,25 @@ enableUAC=0
 inioption=1
 
 [Contents]
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\ekb.prg,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\ekb.wfm,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\ekb.ico,0,1,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\EKB.pdf,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\Versionen.txt,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\PLUSrun.exe,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\PLUSr_de.dll,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\cygiconv-2.dll,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\cygwin1.dll,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\rsync.exe,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\ekb.mnu,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\rsync.bin,0,0,0, 
-D:\Lutz\Documents\Sw_Proj\EKB\v3.4\License.txt,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\ekb.prg,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\ekb.wfm,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\ekb.ico,0,1,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\EKB.pdf,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\Versionen.txt,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\PLUSrun.exe,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\PLUSr_de.dll,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\cygiconv-2.dll,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\cygwin1.dll,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\rsync.exe,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\ekb.mnu,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\rsync.bin,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\License.txt,0,0,0, 
+D:\Lutz\Documents\Sw_Proj\EKB\v4.1\ekb2.prg,0,0,0, 
 
 [DEO]
 
 [INNO]
-ProjectExeFileName=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\EKB.exe
+ProjectExeFileName=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\EKB.exe
 ProjectMainFileName=\Project\Explorer.iss
 ProjectdBaseVersion=dBASE PLUS 2.80  b2215 (04/25/2012-DE120425)
 DefaultDirName={pf}\{#AppName}
@@ -60,7 +61,7 @@ dBProgressbox=false
 dBSilent=false
 dBDestRuntime=
 dBDestBDE=
-SourceFolder=D:\Lutz\Documents\Sw_Proj\EKB\v3.4
+SourceFolder=D:\Lutz\Documents\Sw_Proj\EKB\v4.1
 InnoScriptname=\Project\Explorer.iss
 LastDBVersion=2800
 LastDBLanguage=DE
@@ -111,13 +112,13 @@ INIERRORHANDLING=false
 INITRAP=true
 ININOBDE=false
 Icon1={group}\{#AppName} >> {app}\EKB.exe
-Files1=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\EKB.pdf >> DestDir: {app}
-Files2=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\Versionen.txt >> DestDir: {app}
-Files3=D:\Lutz\Documents\sw_proj\EKB\v3.4\EKB.exe >> DestDir: {app}
-Files4=D:\Lutz\Documents\sw_proj\EKB\v3.4\PLUSrun.exe >> DestDir: {app}
-Files5=D:\Lutz\Documents\sw_proj\EKB\v3.4\PLUSr_de.dll >> DestDir: {app}
-Files6=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\cygiconv-2.dll >> DestDir: {app}
-Files7=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\cygwin1.dll >> DestDir: {app}
-Files8=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\rsync.exe >> DestDir: {app}
-Files9=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\rsync.bin >> DestDir: {app}
-Files10=D:\Lutz\Documents\Sw_Proj\EKB\v3.4\License.txt >> DestDir: {app}
+Files1=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\EKB.pdf >> DestDir: {app}
+Files2=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\Versionen.txt >> DestDir: {app}
+Files3=D:\Lutz\Documents\sw_proj\EKB\v4.1\EKB.exe >> DestDir: {app}
+Files4=D:\Lutz\Documents\sw_proj\EKB\v4.1\PLUSrun.exe >> DestDir: {app}
+Files5=D:\Lutz\Documents\sw_proj\EKB\v4.1\PLUSr_de.dll >> DestDir: {app}
+Files6=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\cygiconv-2.dll >> DestDir: {app}
+Files7=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\cygwin1.dll >> DestDir: {app}
+Files8=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\rsync.exe >> DestDir: {app}
+Files9=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\rsync.bin >> DestDir: {app}
+Files10=D:\Lutz\Documents\Sw_Proj\EKB\v4.1\License.txt >> DestDir: {app}

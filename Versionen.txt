@@ -1,6 +1,13 @@
 EKB - ein kleines Programm zum Thema Backup
 --------------------------------------------------------------------------------
 
+Version 4.1, 29.11.2019
+-----------------------
+
+- Fehlerkorrektur am Windowsformular: Systemmenü ausgeblendet, wird nicht
+  benötigt.
+
+
 Version 4.0, 27.10.2019
 -----------------------
 
