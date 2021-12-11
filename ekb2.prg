@@ -41,7 +41,7 @@ endif
 if file ("ekb.cfg")
 	delete file ekb.cfg
 endif
-* Daten in Dateien schreiben
+* Daten in ekb.cfg schreiben
 fd1 = new File()
 fd1.create("ekb.cfg","A")
 fd1.puts(quelle1)
@@ -128,11 +128,14 @@ endif
 if file ("backup.cmd")
 	delete file backup.cmd
 endif
-* log-Datei mit altem Inhalt löschen
-if file ("log.txt")
-	delete file log.txt
+* log-Dateien mit altem Inhalt löschen
+if file ("Logdatei.txt")
+	delete file Logdatei.txt
 endif
-* Daten in Dateien schreiben
+if file ("Protokoll.txt")
+	delete file Protokoll.txt
+endif
+* Daten in exclude-list.txt schreiben
 fd2 = new File()
 fd2.create("exclude-list.txt","A")
 fd2.puts(ausschl1)
@@ -151,44 +154,40 @@ store "set cygwin=nontsec" to m
 fd1.puts(m)
 if quelle1<>""
    store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle1);
-   +"' '"+oem(ziel+"1/")+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"x1'" to m
+   +"' '"+oem(ziel+"1/")+"' --log-file=./Logdatei.txt --backup-dir='"+oem(ziel)+"x1'" to m
    fd1.puts(m)
 endif
 if quelle2<>""
    store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle2);
-   +"' '"+oem(ziel+"2/")+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"x2'" to m
+   +"' '"+oem(ziel+"2/")+"' --log-file=./Logdatei.txt --backup-dir='"+oem(ziel)+"x2'" to m
    fd1.puts(m)
 endif
 if quelle3<>""
    store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle3);
-   +"' '"+oem(ziel+"3/")+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"x3'" to m
+   +"' '"+oem(ziel+"3/")+"' --log-file=./Logdatei.txt --backup-dir='"+oem(ziel)+"x3'" to m
    fd1.puts(m)
 endif
 if quelle4<>""
    store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle4);
-   +"' '"+oem(ziel+"4/")+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"x4'" to m
+   +"' '"+oem(ziel+"4/")+"' --log-file=./Logdatei.txt --backup-dir='"+oem(ziel)+"x4'" to m
    fd1.puts(m)
 endif
 if quelle5<>""
    store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle5);
-   +"' '"+oem(ziel+"5/")+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"x5'" to m
+   +"' '"+oem(ziel+"5/")+"' --log-file=./Logdatei.txt --backup-dir='"+oem(ziel)+"x5'" to m
    fd1.puts(m)
 endif
 if quelle6<>""
    store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle6);
-   +"' '"+oem(ziel+"6/")+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"x6'" to m
+   +"' '"+oem(ziel+"6/")+"' --log-file=./Logdatei.txt --backup-dir='"+oem(ziel)+"x6'" to m
    fd1.puts(m)
 endif
 if quelle7<>""
    store "rsync --delete -auvPb --exclude-from 'exclude-list.txt' --ignore-errors '"+oem(quelle7);
-   +"' '"+oem(ziel+"7/")+"' --log-file=./log.txt --backup-dir='"+oem(ziel)+"x7'" to m
+   +"' '"+oem(ziel+"7/")+"' --log-file=./Logdatei.txt --backup-dir='"+oem(ziel)+"x7'" to m
    fd1.puts(m)
 endif
-if s="0"
-	store "write .\log.txt" to m  && Logdatei anzeigen
-else
-   store "shutdown /s /t 010" to m  && Shutdown
-endif
+store "unix2dos .\Logdatei.txt" to m  && Konvertierung der Zeilenumbrüche
 fd1.puts(m)
 store "rem Ende" to m
 fd1.puts(m)

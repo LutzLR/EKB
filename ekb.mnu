@@ -6,7 +6,6 @@ new ekbMENU(formObj, "ekbmnu")
 
 class ekbMENU(formObj, name) of MENUBAR(formObj, name)
 
-
    this.MENU1 = new MENU(this)
    with (this.MENU1)
       text = "Programm"
@@ -15,15 +14,20 @@ class ekbMENU(formObj, name) of MENUBAR(formObj, name)
    this.MENU1.MENU2 = new MENU(this.MENU1)
    with (this.MENU1.MENU2)
       text = "Letzte Logdatei betrachten"
-      OnClick = CLASS::PROTOKOLL_ONCLICK
+      OnClick = CLASS::PROTOKOLL1_ONCLICK
    endwith
 
    this.MENU1.MENU3 = new MENU(this.MENU1)
    with (this.MENU1.MENU3)
+      text = "Letztes Protokoll betrachten"
+      OnClick = CLASS::PROTOKOLL2_ONCLICK
+   endwith
+
+   this.MENU1.MENU4 = new MENU(this.MENU1)
+   with (this.MENU1.MENU4)
       text = "Beenden"
       OnClick = CLASS::BEENDEN_ONCLICK
    endwith
-
 
    this.MENU5 = new MENU(this)
    with (this.MENU5)
@@ -54,9 +58,15 @@ class ekbMENU(formObj, name) of MENUBAR(formObj, name)
       run (.f.,m)
    return
 
-   Procedure PROTOKOLL_OnClick  && Logdatei betrachten
+   Procedure PROTOKOLL1_OnClick  && Logdatei betrachten
       set directory to &ORGVERZ
-		store "write .\log.txt" to m
+		store "notepad .\Logdatei.txt" to m
+      run (.t.,m)
+   return
+
+   Procedure PROTOKOLL2_OnClick  && Protokoll betrachten
+      set directory to &ORGVERZ
+		store "notepad .\Protokoll.txt" to m
       run (.t.,m)
    return
 

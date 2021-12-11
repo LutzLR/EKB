@@ -27,17 +27,19 @@ set space off
 * Ausschl1
 * Ausschl2
 * Befehl
-* fd1 ... Dateiobjekt für ekb.cfg und backup.cmd
-* fd2 ... Dateiobjekt für exclude-list.txt
-* m ... für div. Zeichenketten
-* n ... allg. Zähler
-* s ... für Shutdown
-* v ... Version
+* fd1 ... Dateiobjekt für ekb.cfg, Logdatei.txt und backup.cmd
+* fd2 ... Dateiobjekt für exclude-list.txt und Protokoll.txt
+* TxtArr1 ... Array-Objekt zum Bearbeiten von Logdatei und Protokoll
+* m   ... für div. Zeichenketten
+* n,x ... allg. Zähler
+* s   ... für Shutdown
+* f   ... Fehlerflag
+* v   ... Version
 * ORGVERZ ... für Installationsverzeichnis
-PUBLIC ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,n,s
-STORE "" TO ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,s
-STORE 0 to n
-store "v4.1" to v  && Versionsnummer
+PUBLIC ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,n,x,s,f,TxtArr1
+STORE "" TO ORGVERZ,Quelle1,Quelle2,Quelle3,Quelle4,Quelle5,Quelle6,Quelle7,Ziel,Ausschl1,Ausschl2,Befehl,m,s,f
+STORE 0 to n,x
+store "v5.0" to v  && Versionsnummer
 public fd1,fd2  && Dateiobjekte initialisieren
 * Verzeichnis von EKB feststellen und speichern
 store program(1) to m
@@ -52,6 +54,7 @@ endif
 if file ("ekb.pdf");
 	.and. file ("ekb.ini");
 	.and. file ("PLUSrun.exe");
+   .and. file ("unix2dos.exe");
    .and. file ("Plusr_de.dll");
    .and. file ("cygwin1.dll");
    .and. file ("cygiconv-2.dll")

@@ -355,6 +355,8 @@ class ekbForm of FORM
       * Backup ausführen
       store "backup.cmd" to m
 		run (.f.,m)
+      * Log-Datei auswerten und verdichten
+      do ekb3.prg
       * Schaltfläche wieder freigeben
       this.parent.PUSHBUTTON1.enabled = .T.
    return

@@ -1,0 +1,39 @@
+dBASE PLUS Projekt Explorer Log: ekb.txt
+Projektname: EKB
+
+=================================================================
+ALLE NEU ERSTELLEN Prozess gestartet: 29.11.2021 17:49:37
+dBASE PLUS 2.80  b2215 (04/25/2012-DE120425)
+Projekt Explorer b1043 (12/28/2010)
+-----------------------------------------------------------------
+Ergebnisse der Kompilierung für:
+D:\LUTZ\DOCUMENTS\SW_PROJ\EKB\V5.0\EKB.PRG
+0 Warnungen, 0 Fehler
+
+Ergebnisse der Kompilierung für:
+D:\LUTZ\DOCUMENTS\SW_PROJ\EKB\V5.0\EKB.WFM
+0 Warnungen, 0 Fehler
+
+Ergebnisse der Kompilierung für:
+D:\LUTZ\DOCUMENTS\SW_PROJ\EKB\V5.0\EKB.MNU
+0 Warnungen, 0 Fehler
+
+Ergebnisse der Kompilierung für:
+D:\LUTZ\DOCUMENTS\SW_PROJ\EKB\V5.0\EKB2.PRG
+0 Warnungen, 0 Fehler
+
+Ergebnisse der Kompilierung für:
+D:\LUTZ\DOCUMENTS\SW_PROJ\EKB\V5.0\EKB3.PRG
+0 Warnungen, 0 Fehler
+
+Ergebnisse der Kompilierung für:
+D:\LUTZ\DOCUMENTS\SW_PROJ\EKB\V5.0\EKB4.PRG
+0 Warnungen, 0 Fehler
+
+Prozess beendet um 17:49:38 (1 Sekunden benötigt)
+Anzahl Kompilierversuche: 6
+Fehler beim Kompilieren der Datei: 0
+DEO-Dateien kopiert: 0
+Ausführbare Datei: D:\Lutz\Documents\Sw_Proj\EKB\v5.0\EKB.exe
+Größe der ausführbaren Datei: 168.069
+
