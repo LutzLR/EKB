@@ -1,10 +1,21 @@
 EKB - ein kleines Programm zum Thema Backup
 --------------------------------------------------------------------------------
+Version 5.0, 28.11.2021
+-----------------------
+
+- Auswertung / Verdichtung der Logdatei zu einem besser lesbarem Protokoll.
+  Nach Abschluß eines Backups wird dieses Protokoll angezeigt.
+
+- Im Menü des Programm lässt sich die Logdatei als auch das Protokoll des
+  letzten Backup-Laufs anzeigen.
+
+- Beschreibung zu EKB (ekb.pdf) aktualisiert.
+
 
 Version 4.1, 29.11.2019
 -----------------------
 
-- Fehlerkorrektur am Windowsformular: Systemmenü ausgeblendet, wird nicht
+- Fehlerkorrektur am Windowsformular: Systemmenü ausgeblendet - es wird nicht
   benötigt.
 
 
